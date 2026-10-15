@@ -1,0 +1,234 @@
+[
+  {
+    "id": "R-8057",
+    "name": "Drovers Horse Rocker",
+    "code": "R-8057",
+    "url": "https://www.moduplay.com.au/product/drovers-horse-r-8057",
+    "fields": {
+      "Supplier": "Moduplay",
+      "Product code": "R-8057",
+      "Material": "Not specified in the reviewed webpage or product sheet. Confirm body, spring and support materials.",
+      "Finishes": "Not specified; supplier confirmation required.",
+      "Colour": "No published colour specification found; confirm selected colour with supplier.",
+      "Fixing options": "Not confirmed. Product sheet lists 1 footing and 0.15 m3 concrete; foundation details available on application.",
+      "Price": "Not publicly displayed. Login / registration required.",
+      "CAD status": "Not downloaded. Public DWG link returns \"Download unavailable\"; product sheet directs users to login/register."
+    },
+    "assets": [
+      {
+        "role": "Main_Image",
+        "url": "/products/Drovers_Horse_Rocker_R-8057_Main_Image.jpg",
+        "filename": "Drovers_Horse_Rocker_R-8057_Main_Image.jpg",
+        "kind": "image",
+        "status": "available"
+      },
+      {
+        "role": "Elevation_Reference",
+        "url": "/products/Drovers_Horse_Rocker_R-8057_Elevation_Reference.png",
+        "filename": "Drovers_Horse_Rocker_R-8057_Elevation_Reference.png",
+        "kind": "image",
+        "status": "available"
+      },
+      {
+        "role": "Plan_Reference",
+        "url": "/products/Drovers_Horse_Rocker_R-8057_Plan_Reference.png",
+        "filename": "Drovers_Horse_Rocker_R-8057_Plan_Reference.png",
+        "kind": "image",
+        "status": "available"
+      },
+      {
+        "role": "Product_Sheet",
+        "url": "/products/Drovers_Horse_Rocker_R-8057_Product_Sheet.pdf",
+        "filename": "Drovers_Horse_Rocker_R-8057_Product_Sheet.pdf",
+        "kind": "pdf",
+        "status": "available"
+      },
+      {
+        "role": "Supplier_2D",
+        "url": "https://www.moduplay.com.au/product/drovers-horse-r-8057/",
+        "filename": "Drovers_Horse_Rocker_R-8057_Plan.dwg",
+        "kind": "cad",
+        "status": "blocked",
+        "note": "Supplier sign-in required for DWG"
+      }
+    ],
+    "notes": [
+      "Included: main image, manufacturer product sheet, top-view and side-view reference PNGs. Reference images are not DWG/DXF substitutes.",
+      "Follow up: DWG access, materials, coating, colour, footing detail and price."
+    ],
+    "image": "/products/Drovers_Horse_Rocker_R-8057_Main_Image.jpg",
+    "plan": "/products/Drovers_Horse_Rocker_R-8057_Plan_Reference.png",
+    "planLabel": "Supplier plan reference",
+    "checkedAt": "2026-10-13",
+    "reviewed": true,
+    "fromSnapshot": true
+  },
+  {
+    "id": "501-CAR",
+    "name": "Repurposed Car Play Feature",
+    "code": "501-CAR",
+    "url": "https://vanrytind.com.au/showcase-product/501-car_car_repurposed-car-play-feature-wa",
+    "fields": {
+      "Supplier": "Van Ryt Industries (VRI), Western Australia",
+      "Product code": "501-CAR",
+      "Material": "Salvaged vehicle body (e.g. VW Beetle); WA Jarrah interior, dashboard and timber bench. Body alloy / metal grade not specified.",
+      "Finishes": "Timber coating and vehicle-body paint system not specified; confirm with supplier.",
+      "Colour": "Customisable colour options. Final project colour not selected.",
+      "Fixing options": "Not published. Confirm surface / in-ground fixing and footing detail.",
+      "Price": "No public price found; supplier quotation required.",
+      "CAD status": "Supplier DWG downloaded (AC1032). Embedded preview shows a vehicle plan. Full geometry, units and fall-zone layers require CAD review."
+    },
+    "assets": [
+      {
+        "role": "Main_Image",
+        "url": "/products/Repurposed_Car_Play_Feature_501-CAR_Main_Image.png",
+        "filename": "Repurposed_Car_Play_Feature_501-CAR_Main_Image.png",
+        "kind": "image",
+        "status": "available"
+      },
+      {
+        "role": "Product_Sheet",
+        "url": "/products/Repurposed_Car_Play_Feature_501-CAR_Product_Sheet.pdf",
+        "filename": "Repurposed_Car_Play_Feature_501-CAR_Product_Sheet.pdf",
+        "kind": "pdf",
+        "status": "available"
+      },
+      {
+        "role": "Supplier_2D_Drawing",
+        "url": "/products/Repurposed_Car_Play_Feature_501-CAR_Supplier_2D_Drawing.dwg",
+        "filename": "Repurposed_Car_Play_Feature_501-CAR_Supplier_2D_Drawing.dwg",
+        "kind": "cad",
+        "status": "available"
+      }
+    ],
+    "notes": [
+      "Included: main image, product information sheet and original supplier DWG.",
+      "Published dimensions: W 2000 x L 4500 x H 1500 mm. Final dimensions may vary with salvaged vehicle."
+    ],
+    "image": "/products/Repurposed_Car_Play_Feature_501-CAR_Main_Image.png",
+    "plan": "/products/501-CAR_Plan_Preview.png",
+    "planLabel": "Embedded CAD thumbnail",
+    "checkedAt": "2026-10-13",
+    "reviewed": true,
+    "fromSnapshot": true
+  },
+  {
+    "id": "NRO118",
+    "name": "Bee Springer",
+    "code": "NRO118",
+    "url": "https://www.kompan.com/en/au/p/nro118",
+    "fields": {
+      "Supplier": "KOMPAN Australia",
+      "Product code": "NRO118; main displayed item NRO118-0421",
+      "Material": "Oak body; reinforced rubber membrane wings; stainless-steel handles / footrests with PUR grips; spring steel.",
+      "Finishes": "Untreated oak shown; brown wood option available. Spring: phosphating, epoxy primer and polyester powder coat.",
+      "Colour": "Untreated oak or brown wood options. Main image: NRO118-0421. Confirm exact item and colour when ordering.",
+      "Fixing options": "Product family offers In-ground and Surface. NRO118-0421 sheet specifies In-ground; final mounting depends on item suffix.",
+      "Price": "AUD 6,100 price guide, excluding GST, shipping and installation. Subject to change; obtain project quote.",
+      "CAD status": "Official NRO118_2D_AS.dwg downloaded; labelled 2D / AS by supplier. Plan PDF included. DWG geometry and units need CAD review."
+    },
+    "assets": [
+      {
+        "role": "Main_Image",
+        "url": "/products/Bee_Springer_NRO118_Main_Image.png",
+        "filename": "Bee_Springer_NRO118_Main_Image.png",
+        "kind": "image",
+        "status": "available"
+      },
+      {
+        "role": "Supplier_2D_AS",
+        "url": "/products/Bee_Springer_NRO118_Supplier_2D_AS.dwg",
+        "filename": "Bee_Springer_NRO118_Supplier_2D_AS.dwg",
+        "kind": "cad",
+        "status": "available"
+      },
+      {
+        "role": "Footprint_AS",
+        "url": "/products/Bee_Springer_NRO118_Footprint_AS.pdf",
+        "filename": "Bee_Springer_NRO118_Footprint_AS.pdf",
+        "kind": "pdf",
+        "status": "available"
+      },
+      {
+        "role": "Elevation_AS",
+        "url": "/products/Bee_Springer_NRO118_Elevation_AS.pdf",
+        "filename": "Bee_Springer_NRO118_Elevation_AS.pdf",
+        "kind": "pdf",
+        "status": "available"
+      },
+      {
+        "role": "Product_Sheet_AU_AS",
+        "url": "/products/Bee_Springer_NRO118_Product_Sheet_AU_AS.pdf",
+        "filename": "Bee_Springer_NRO118_Product_Sheet_AU_AS.pdf",
+        "kind": "pdf",
+        "status": "available"
+      },
+      {
+        "role": "Variant_NRO118-0011",
+        "url": "/products/Bee_Springer_NRO118_Variant_NRO118-0011.pdf",
+        "filename": "Bee_Springer_NRO118_Variant_NRO118-0011.pdf",
+        "kind": "pdf",
+        "status": "available"
+      },
+      {
+        "role": "Variant_NRO118-0031",
+        "url": "/products/Bee_Springer_NRO118_Variant_NRO118-0031.pdf",
+        "filename": "Bee_Springer_NRO118_Variant_NRO118-0031.pdf",
+        "kind": "pdf",
+        "status": "available"
+      },
+      {
+        "role": "Variant_NRO118-0401",
+        "url": "/products/Bee_Springer_NRO118_Variant_NRO118-0401.pdf",
+        "filename": "Bee_Springer_NRO118_Variant_NRO118-0401.pdf",
+        "kind": "pdf",
+        "status": "available"
+      },
+      {
+        "role": "Variant_NRO118-0411",
+        "url": "/products/Bee_Springer_NRO118_Variant_NRO118-0411.pdf",
+        "filename": "Bee_Springer_NRO118_Variant_NRO118-0411.pdf",
+        "kind": "pdf",
+        "status": "available"
+      },
+      {
+        "role": "Variant_NRO118-0421",
+        "url": "/products/Bee_Springer_NRO118_Variant_NRO118-0421.pdf",
+        "filename": "Bee_Springer_NRO118_Variant_NRO118-0421.pdf",
+        "kind": "pdf",
+        "status": "available"
+      },
+      {
+        "role": "Variant_NRO118-0431",
+        "url": "/products/Bee_Springer_NRO118_Variant_NRO118-0431.pdf",
+        "filename": "Bee_Springer_NRO118_Variant_NRO118-0431.pdf",
+        "kind": "pdf",
+        "status": "available"
+      },
+      {
+        "role": "Variant_NRO118-0611",
+        "url": "/products/Bee_Springer_NRO118_Variant_NRO118-0611.pdf",
+        "filename": "Bee_Springer_NRO118_Variant_NRO118-0611.pdf",
+        "kind": "pdf",
+        "status": "available"
+      },
+      {
+        "role": "Variant_NRO118-0631",
+        "url": "/products/Bee_Springer_NRO118_Variant_NRO118-0631.pdf",
+        "filename": "Bee_Springer_NRO118_Variant_NRO118-0631.pdf",
+        "kind": "pdf",
+        "status": "available"
+      }
+    ],
+    "notes": [
+      "Included: main image, Australian product sheet, 2D DWG, footprint / elevation PDFs and 8 item-specific sheets.",
+      "Variant sheets are references, not a selected project configuration. Check the exact item before detailing foundations."
+    ],
+    "image": "/products/Bee_Springer_NRO118_Main_Image.png",
+    "plan": "/products/Bee_Springer_NRO118_Plan_Preview.jpg",
+    "planLabel": "Supplier plan reference",
+    "checkedAt": "2026-10-13",
+    "reviewed": true,
+    "fromSnapshot": true
+  }
+]

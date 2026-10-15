@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1791872149566,
+      "tag": "0000_breezy_jazinda",
+      "breakpoints": true
+    }
+  ]
+}

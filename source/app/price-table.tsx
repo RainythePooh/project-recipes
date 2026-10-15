@@ -1,0 +1,14 @@
+'use client';
+import {useEffect,useState} from 'react';
+import type {Product} from '@/lib/types';
+import {pricingFor,priceSummary,lineTotal,money,maxUnitPrice,maxQuantity,type Pricing} from '@/lib/pricing';
+function NumberField({value,kind,label,onChange}:{value:number|null;kind:'price'|'quantity';label:string;onChange:(v:number|null)=>void}){
+ const format=(v:number|null)=>v===null?'':kind==='price'?v.toFixed(2):String(v);
+ const [draft,setDraft]=useState(format(value)),[focused,setFocused]=useState(false);
+ useEffect(()=>{if(!focused)setDraft(format(value))},[value,focused,kind]);
+ return <input type="text" inputMode={kind==='price'?'decimal':'numeric'} aria-label={label} value={draft} maxLength={kind==='price'?11:6} onFocus={()=>setFocused(true)} onChange={e=>{const s=e.target.value;if(!(kind==='price'?/^\d*(?:\.\d{0,2})?$/:/^\d*$/).test(s))return;const n=s===''||s==='.'?null:Number(s);if(n!==null&&n>(kind==='price'?maxUnitPrice:maxQuantity))return;setDraft(s);if(kind==='price'||n!==null)onChange(n)}} onBlur={()=>{setFocused(false);setDraft(format(value))}} onKeyDown={e=>{if(e.key==='Enter')e.currentTarget.blur()}}/>
+}
+export default function PriceTable({products,onChange}:{products:Product[];onChange:(id:string,pricing:Pricing)=>void}){
+ const summary=priceSummary(products);
+ return <section className="price-section" aria-labelledby="price-heading"><div className="price-heading"><div className="heading-line"><span className="step-number">03</span><h2 id="price-heading">Price summary</h2></div><span className="currency-pill">AUD</span></div>{products.length?<><div className="price-table-wrap"><table className="price-table"><thead><tr><th scope="col">Product</th><th scope="col">Code</th><th scope="col">Unit price (AUD)</th><th scope="col">Quantity</th><th scope="col">Total (AUD)</th></tr></thead><tbody>{products.map(p=>{const cost=pricingFor(p),total=lineTotal(cost);return <tr key={p.id}><th scope="row"><span>{p.name}</span><small>{p.fields.Supplier}</small></th><td className="price-code">{p.code}</td><td><NumberField kind="price" value={cost.unitPrice} label={'Unit price in AUD for '+p.name} onChange={unitPrice=>onChange(p.id,{...cost,unitPrice})}/></td><td><NumberField kind="quantity" value={cost.quantity} label={'Quantity for '+p.name} onChange={quantity=>onChange(p.id,{...cost,quantity:quantity??1})}/></td><td className="price-amount">{total===null?'':money(total)}</td></tr>})}</tbody><tfoot><tr><th scope="row" colSpan={4}>{summary.missing?'Known-price total':'Project total'}</th><td className="price-amount">{summary.total===null?'':money(summary.total)}</td></tr></tfoot></table></div><div className="price-caption"><span>Edit unit prices and quantities above.</span>{summary.missing>0&&<span>{summary.missing} {summary.missing===1?'price':'prices'} missing</span>}</div></>:<div className="price-empty">Select products to include them in your price summary.</div>}</section>
+}

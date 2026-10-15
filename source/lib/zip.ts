@@ -1,0 +1,3 @@
+import {unzipSync} from 'fflate';
+export function cadEntries(b:Uint8Array){const list:{name:string;size:number}[]=[];let total=0;unzipSync(b,{filter:f=>{if(/\.(dwg|dxf)$/i.test(f.name)&&!f.name.startsWith('__MACOSX/')){total+=f.originalSize;if(f.originalSize>16*1024*1024||total>32*1024*1024||list.length>=20)throw new Error('CAD archive exceeds extraction limit');list.push({name:f.name,size:f.originalSize})}return false}});return list}
+export function extractCad(b:Uint8Array,name:string){if(!cadEntries(b).some(v=>v.name===name))throw new Error('CAD entry not found');const z=unzipSync(b,{filter:f=>f.name===name});return z[name]}

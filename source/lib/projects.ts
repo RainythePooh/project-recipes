@@ -1,0 +1,13 @@
+import {maxUnitPrice,maxQuantity} from './pricing';
+import {z} from 'zod';
+const path=z.string().max(3000).refine(v=>v.startsWith('/products/')||v.startsWith('/api/file?'),'Unsupported asset path');
+const product=z.object({id:z.string().max(2100),name:z.string().max(250),code:z.string().max(200),url:z.string().url().max(2100),fields:z.object({'Supplier':z.string().max(2000),'Product code':z.string().max(2000),Material:z.string().max(2000),Finishes:z.string().max(2000),Colour:z.string().max(2000),'Fixing options':z.string().max(2000),Price:z.string().max(2000),'CAD status':z.string().max(2000)}),assets:z.array(z.object({role:z.string().max(200),url:z.string().max(3000).refine(v=>v.startsWith('/products/')||v.startsWith('/api/file?')||/^https:\/\/(www\.)?(moduplay\.com\.au|vanrytind\.com\.au|kompan\.com)\//.test(v)),filename:z.string().max(500),kind:z.enum(['image','cad','pdf']),status:z.enum(['available','blocked']),note:z.string().max(1000).optional(),previewUrl:path.optional()})).max(60),notes:z.array(z.string().max(2000)).max(20),image:path.optional(),plan:path.optional(),planLabel:z.string().max(200).optional(),checkedAt:z.string().max(100),reviewed:z.boolean(),fromSnapshot:z.boolean(),pricing:z.object({unitPrice:z.number().finite().min(0).max(maxUnitPrice).multipleOf(0.01).nullable(),quantity:z.number().int().min(0).max(maxQuantity)}).optional()});
+export const projectInput=z.object({name:z.string().trim().min(1,'Enter a project name').max(100),revision:z.number().int().positive().optional(),state:z.object({products:z.array(product).max(40),queue:z.array(z.object({url:z.string().url().max(2100),state:z.enum(['pending','loading','done','error']),error:z.string().max(1000).optional()})).max(80),selected:z.array(z.string().max(2100)).max(40),input:z.string().max(16000)})});
+export const queries={
+ list:'SELECT id, name, revision, created_at, updated_at FROM projects WHERE owner_id = ? ORDER BY updated_at DESC LIMIT 200',
+ get:'SELECT id, name, data, revision, created_at, updated_at FROM projects WHERE id = ? AND owner_id = ?',
+ insert:'INSERT INTO projects (id, owner_id, name, data, revision, created_at, updated_at) VALUES (?, ?, ?, ?, 1, ?, ?)',
+ update:'UPDATE projects SET name = ?, data = ?, revision = revision + 1, updated_at = ? WHERE id = ? AND owner_id = ? AND revision = ?',
+};
+export function sameOrigin(req:Request){const origin=req.headers.get('origin');return !origin||new URL(origin).origin===new URL(req.url).origin}
+export async function readProjectBody(req:Request){if(Number(req.headers.get('content-length')||0)>800000)throw new Error('Project is too large');const raw=await req.text();if(raw.length>800000)throw new Error('Project is too large');return projectInput.parse(JSON.parse(raw))}
